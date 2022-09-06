@@ -208,3 +208,42 @@ function getcityApi(city) {
       }
     });
 }
+
+function historyButton (city) {
+    if (citydataArray.indexOf(city) !== -1) {
+      return;
+    }
+    citydataArray.push(city);
+      localStorage.setItem("city", JSON.stringify(citydataArray));
+    rendercityHistory();
+  }
+  
+  function getcityHistory () {
+    var history = localStorage.getItem("city");
+    if (history) {
+  citydataArray = JSON.parse(history);
+    }
+    rendercityHistory();
+  }
+  
+  function rendercityHistory() {
+    // var cityArray = JSON.parse(localStorage.getItem("city")) || [];
+    cityList.innerHTML = "";
+    for (var i = 0; i < citydataArray.length; i++) {
+      console.log(citydataArray);
+      
+      var cityhistoryBtn = document.createElement("li");
+      var cityhistorybtnText = document.createTextNode(citydataArray[i]);
+  
+      cityhistoryBtn.appendChild(cityhistorybtnText);
+      cityhistoryBtn.addEventListener("click", (event) => {
+        document.querySelector("#city-and-date").innerHTML =
+          event.target.textContent.trim();
+        getcityApi(event.target.textContent);
+        // cityhistoryBtn.textContent = "";
+      });
+  
+      cityList.appendChild(cityhistoryBtn);
+    }
+  }
+  getcityHistory();
