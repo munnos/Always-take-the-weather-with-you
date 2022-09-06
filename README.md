@@ -7,8 +7,8 @@ locations based on user input.
 
 ## Table of Contents
 
-* [Issues] (#issues)
-* [Features] (#features)
+* [Issues](#issues)
+* [Features](#features)
 * [Screenshots](#screenshots)
 * [Deployment](#deployment)
 * [Credits](#credits)
