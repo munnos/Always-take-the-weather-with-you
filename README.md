@@ -8,11 +8,11 @@ locations based on user input.
 ## Table of Contents
 
 * [Issues] (#issues)
-*[Features] (#features)
-*[Screenshots](#screenshots)
-*[Deployment](#deployment)
-*[Credits](#credits)
-*[Questions](#questions)
+* [Features] (#features)
+* [Screenshots](#screenshots)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Questions](#questions)
 
 ## Issues 
 
